@@ -1,6 +1,10 @@
 
 import Link from "next/link";
 
+const WHATSAPP_NUMBER = "254790694325";
+const WHATSAPP_MESSAGE =
+  "Hello Ephan Technologies, I would like to enquire about your services. Please assist me.";
+
 const services = [
   {
     number: "01",
@@ -115,6 +119,7 @@ export default function Home() {
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-950 text-2xl font-bold text-white shadow-lg shadow-blue-950/15">
               E
             </div>
+
             <div className="leading-tight">
               <p className="text-lg font-extrabold tracking-[0.12em] text-blue-950">
                 EPHAN
@@ -144,6 +149,7 @@ export default function Home() {
             <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-200 text-xl text-blue-950">
               ☰
             </summary>
+
             <nav className="absolute right-0 top-14 flex w-56 flex-col gap-1 rounded-xl border border-slate-200 bg-white p-3 shadow-xl">
               <Link href="/" className="rounded-lg px-4 py-3 text-sm font-semibold hover:bg-blue-50">Home</Link>
               <Link href="/about" className="rounded-lg px-4 py-3 text-sm font-semibold hover:bg-blue-50">About</Link>
@@ -187,6 +193,7 @@ export default function Home() {
               >
                 Start a Project <span className="ml-3 text-lg">↗</span>
               </Link>
+
               <Link
                 href="/services"
                 className="inline-flex items-center rounded-lg border border-slate-300 bg-white px-7 py-4 text-sm font-bold text-blue-950 transition hover:border-blue-500 hover:text-blue-700"
@@ -223,6 +230,7 @@ export default function Home() {
                     Ideas deserve<br />the right solution.
                   </h2>
                 </div>
+
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-xl font-bold text-white">
                   E.
                 </div>
@@ -237,15 +245,17 @@ export default function Home() {
                 ].map((item, index) => (
                   <div
                     key={item[0]}
-                    className="flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.06] p-4 transition hover:bg-white/10"
+                    className={`flex items-center gap-4 rounded-xl border border-white/10 bg-white/[0.06] p-4 transition hover:bg-white/10`}
                   >
                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-sm font-bold ${index === 3 ? "bg-cyan-400 text-blue-950" : "bg-blue-800 text-blue-100"}`}>
                       {item[0]}
                     </div>
+
                     <div>
                       <p className="text-sm font-bold text-white">{item[1]}</p>
                       <p className="mt-1 text-xs text-blue-200">{item[2]}</p>
                     </div>
+
                     <span className="ml-auto text-blue-300">↗</span>
                   </div>
                 ))}
@@ -294,6 +304,7 @@ export default function Home() {
               We believe every good idea deserves the right technology.
             </h2>
           </div>
+
           <div className="lg:pl-8">
             <p className="text-lg leading-8 text-slate-600">
               Ephan Technologies is a technology solutions company focused
@@ -325,6 +336,7 @@ export default function Home() {
                 Technology solutions for real-world needs.
               </h2>
             </div>
+
             <p className="max-w-md text-sm leading-7 text-slate-500">
               From building new digital products to maintaining and
               supporting existing ones, we help you move forward with
@@ -346,6 +358,7 @@ export default function Home() {
                     {service.category}
                   </span>
                 </div>
+
                 <h3 className="mt-8 text-xl font-bold text-blue-950">
                   {service.title}
                 </h3>
@@ -448,6 +461,7 @@ export default function Home() {
                 to purposeful digital products and practical solutions.
               </p>
             </div>
+
             <Link href="/portfolio" className="font-semibold text-cyan-300 hover:text-white">
               Explore our portfolio →
             </Link>
@@ -469,6 +483,7 @@ export default function Home() {
                     {project.number}
                   </span>
                 </div>
+
                 <div className="p-7 sm:p-8">
                   <p className="text-[10px] font-extrabold tracking-[0.16em] text-cyan-300">
                     {project.status}
@@ -602,6 +617,7 @@ export default function Home() {
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-blue-950 px-7 py-16 text-center sm:px-14 sm:py-20">
           <div className="absolute -left-24 -top-32 h-80 w-80 rounded-full border border-white/10" />
           <div className="absolute -right-20 -bottom-40 h-96 w-96 rounded-full border border-white/10" />
+
           <div className="relative mx-auto max-w-3xl">
             <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-cyan-300">
               Your vision starts here
@@ -621,8 +637,9 @@ export default function Home() {
               >
                 Contact Our Team <span className="ml-3">↗</span>
               </Link>
+
               <a
-                href="https://wa.me/254790694325"
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center rounded-lg border border-blue-300 px-7 py-4 text-sm font-bold text-white transition hover:bg-blue-900"
@@ -630,6 +647,7 @@ export default function Home() {
                 WhatsApp Us
               </a>
             </div>
+
             <p className="mt-6 text-sm text-blue-200">
               WhatsApp: +254 790 694325
             </p>
@@ -652,6 +670,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
             <p className="mt-6 max-w-sm text-sm font-semibold leading-7 text-white">
               Building the Right Product for Your Vision.
             </p>
@@ -674,7 +693,12 @@ export default function Home() {
           <div>
             <h3 className="text-sm font-bold">Get in touch</h3>
             <div className="mt-5 flex flex-col gap-3 text-sm text-slate-400">
-              <a href="https://wa.me/254790694325" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white"
+              >
                 WhatsApp: +254 790 694325
               </a>
               <Link href="/contact" className="hover:text-white">Start a project</Link>

@@ -1,3 +1,4 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -6,7 +7,6 @@ const nextConfig: NextConfig = {
     agentFeedback: true,
   },
   cacheComponents: false,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {

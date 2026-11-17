@@ -5,6 +5,8 @@ import type { FormEvent } from "react";
 
 const WHATSAPP_NUMBER = "254790694325";
 
+const WHATSAPP_MESSAGE =
+  "Hello Ephan Technologies, I would like to enquire about your services. Please assist me.";
 function sendToWhatsApp(
   event: FormEvent<HTMLFormElement>,
   enquiryType: string
@@ -66,7 +68,7 @@ export default function ContactPage() {
           </nav>
 
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-blue-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
@@ -109,7 +111,7 @@ export default function ContactPage() {
               +254 790 694325
             </p>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 inline-block rounded-full bg-green-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-green-700"
@@ -292,7 +294,7 @@ export default function ContactPage() {
             can help bring your ideas to life.
           </p>
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-7 inline-block rounded-full bg-white px-7 py-3 font-bold text-blue-950 hover:bg-blue-100"
